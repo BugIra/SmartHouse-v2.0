@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         Title
+      </title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="./style.css" />
+   </head>
+   <body>
+      <script src="./SmartHouse.js"></script>
+      <script src="./ManageID.js"></script>
+      <script src="./Device.js"></script>
+	  <script src="./Light.js"></script>
+	  <script src="./Washer.js"></script>
+	  <script src="./TV.js"></script>
+	  <script>
+	  let sh = new SmartHouse( "me" );
+	  let tv = new TV( "sony", "body" );
+	  let l = new Light( "maxus", "body" );
+	  let w = new Washer( "samsung", "body" );	  
+	  console.log( tv.model );
+	  console.log( tv.currentVolume );
+	  tv.increaseVolume();
+	  tv.increaseVolume();
+	  tv.increaseVolume();
+	  tv.increaseVolume();
+	  tv.decreaseVolume();
+	  console.log( tv.currentVolume );
+	  console.log( l.model );
+	  console.log( l.currentBright );
+	  l.increaseBright();
+	  l.decreaseBright();
+	  l.decreaseBright();
+	  l.decreaseBright();
+	  console.log( l.currentBright );
+	  l.lightOnOff();
+	  console.log( l.currentBright );
+	  l.lightOnOff();
+	  console.log( l.currentBright );
+	  w.regime = "Wool";
+	  console.log( w.regime );
+	  console.log( w.spin );
+	  console.log( w.temperature );
+	  console.log( w.time );
+	  
+	  </script>   
+   </body>
+</html>
